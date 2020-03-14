@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import NotificationCenter
 
 class GagernTodayViewControllerTableController: UITableViewController {
 
+    var homework = ["S. 36f. 5a-j 7g-l 8", "Experiment AB3", "Resümee (vgl. AB1)", "S. 158 4-6", "Comparative Essay"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +21,21 @@ class GagernTodayViewControllerTableController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        //self.preferredContentSize = CGSize(width:self.view.frame.size.width, height:512)
+        
+        print("Enabling expansion")
+        extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+        print("Done.")
+
+    }
+
+    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        if activeDisplayMode == .expanded {
+            preferredContentSize = CGSize(width: maxSize.width, height: 500)
+        } else {
+            preferredContentSize = maxSize
+        }
     }
 
     // MARK: - Table view data source
@@ -29,7 +47,16 @@ class GagernTodayViewControllerTableController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return homework.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "homeworkCell", for: indexPath)
+
+        cell.textLabel?.text = homework[indexPath.row]
+
+        return cell
+    
     }
 
     /*
