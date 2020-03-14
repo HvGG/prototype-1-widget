@@ -15,6 +15,10 @@
 		4FCFC141241D2D540022580E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FCFC13F241D2D540022580E /* LaunchScreen.storyboard */; };
 		4FCFC14C241D2D540022580E /* gc_prototype_1_teTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCFC14B241D2D540022580E /* gc_prototype_1_teTests.swift */; };
 		4FCFC157241D2D540022580E /* gc_prototype_1_teUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCFC156241D2D540022580E /* gc_prototype_1_teUITests.swift */; };
+		4FCFC16B241D2D830022580E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FCFC16A241D2D830022580E /* NotificationCenter.framework */; };
+		4FCFC171241D2D830022580E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FCFC16F241D2D830022580E /* MainInterface.storyboard */; };
+		4FCFC175241D2D830022580E /* Gagern Cloud Aktuell.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4FCFC168241D2D830022580E /* Gagern Cloud Aktuell.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4FCFC17C241D42B30022580E /* GagernTodayViewControllerTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCFC17B241D42B30022580E /* GagernTodayViewControllerTableController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +36,28 @@
 			remoteGlobalIDString = 4FCFC130241D2D510022580E;
 			remoteInfo = "gc-prototype-1-te";
 		};
+		4FCFC173241D2D830022580E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FCFC129241D2D510022580E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FCFC167241D2D830022580E;
+			remoteInfo = "Gagern Cloud Aktuell";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4FCFC179241D2D830022580E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4FCFC175241D2D830022580E /* Gagern Cloud Aktuell.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4FCFC131241D2D510022580E /* gc-prototype-1-te.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gc-prototype-1-te.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +74,12 @@
 		4FCFC152241D2D540022580E /* gc-prototype-1-teUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gc-prototype-1-teUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FCFC156241D2D540022580E /* gc_prototype_1_teUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gc_prototype_1_teUITests.swift; sourceTree = "<group>"; };
 		4FCFC158241D2D540022580E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FCFC168241D2D830022580E /* Gagern Cloud Aktuell.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Gagern Cloud Aktuell.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FCFC16A241D2D830022580E /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		4FCFC170241D2D830022580E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		4FCFC172241D2D830022580E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FCFC17A241D42B30022580E /* Gagern Cloud Aktuell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gagern Cloud Aktuell-Bridging-Header.h"; sourceTree = "<group>"; };
+		4FCFC17B241D42B30022580E /* GagernTodayViewControllerTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GagernTodayViewControllerTableController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +104,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FCFC165241D2D830022580E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FCFC16B241D2D830022580E /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +121,8 @@
 				4FCFC133241D2D510022580E /* gc-prototype-1-te */,
 				4FCFC14A241D2D540022580E /* gc-prototype-1-teTests */,
 				4FCFC155241D2D540022580E /* gc-prototype-1-teUITests */,
+				4FCFC16C241D2D830022580E /* Gagern Cloud Aktuell */,
+				4FCFC169241D2D830022580E /* Frameworks */,
 				4FCFC132241D2D510022580E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +133,7 @@
 				4FCFC131241D2D510022580E /* gc-prototype-1-te.app */,
 				4FCFC147241D2D540022580E /* gc-prototype-1-teTests.xctest */,
 				4FCFC152241D2D540022580E /* gc-prototype-1-teUITests.xctest */,
+				4FCFC168241D2D830022580E /* Gagern Cloud Aktuell.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +178,25 @@
 			path = "gc-prototype-1-teUITests";
 			sourceTree = "<group>";
 		};
+		4FCFC169241D2D830022580E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FCFC16A241D2D830022580E /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4FCFC16C241D2D830022580E /* Gagern Cloud Aktuell */ = {
+			isa = PBXGroup;
+			children = (
+				4FCFC16F241D2D830022580E /* MainInterface.storyboard */,
+				4FCFC172241D2D830022580E /* Info.plist */,
+				4FCFC17B241D42B30022580E /* GagernTodayViewControllerTableController.swift */,
+				4FCFC17A241D42B30022580E /* Gagern Cloud Aktuell-Bridging-Header.h */,
+			);
+			path = "Gagern Cloud Aktuell";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,10 +207,12 @@
 				4FCFC12D241D2D510022580E /* Sources */,
 				4FCFC12E241D2D510022580E /* Frameworks */,
 				4FCFC12F241D2D510022580E /* Resources */,
+				4FCFC179241D2D830022580E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4FCFC174241D2D830022580E /* PBXTargetDependency */,
 			);
 			name = "gc-prototype-1-te";
 			productName = "gc-prototype-1-te";
@@ -192,6 +255,23 @@
 			productReference = 4FCFC152241D2D540022580E /* gc-prototype-1-teUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		4FCFC167241D2D830022580E /* Gagern Cloud Aktuell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FCFC176241D2D830022580E /* Build configuration list for PBXNativeTarget "Gagern Cloud Aktuell" */;
+			buildPhases = (
+				4FCFC164241D2D830022580E /* Sources */,
+				4FCFC165241D2D830022580E /* Frameworks */,
+				4FCFC166241D2D830022580E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gagern Cloud Aktuell";
+			productName = "Gagern Cloud Aktuell";
+			productReference = 4FCFC168241D2D830022580E /* Gagern Cloud Aktuell.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,6 +293,10 @@
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 4FCFC130241D2D510022580E;
 					};
+					4FCFC167241D2D830022580E = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
 				};
 			};
 			buildConfigurationList = 4FCFC12C241D2D510022580E /* Build configuration list for PBXProject "gc-prototype-1-te" */;
@@ -231,6 +315,7 @@
 				4FCFC130241D2D510022580E /* gc-prototype-1-te */,
 				4FCFC146241D2D540022580E /* gc-prototype-1-teTests */,
 				4FCFC151241D2D540022580E /* gc-prototype-1-teUITests */,
+				4FCFC167241D2D830022580E /* Gagern Cloud Aktuell */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +342,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FCFC166241D2D830022580E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FCFC171241D2D830022580E /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +382,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FCFC164241D2D830022580E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FCFC17C241D42B30022580E /* GagernTodayViewControllerTableController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -302,6 +403,11 @@
 			target = 4FCFC130241D2D510022580E /* gc-prototype-1-te */;
 			targetProxy = 4FCFC153241D2D540022580E /* PBXContainerItemProxy */;
 		};
+		4FCFC174241D2D830022580E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FCFC167241D2D830022580E /* Gagern Cloud Aktuell */;
+			targetProxy = 4FCFC173241D2D830022580E /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -311,6 +417,14 @@
 				4FCFC140241D2D540022580E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4FCFC16F241D2D830022580E /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FCFC170241D2D830022580E /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -433,12 +547,14 @@
 		4FCFC15C241D2D540022580E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"gc-prototype-1-te/Preview Content\"";
 				DEVELOPMENT_TEAM = 9NHZYLFW4V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "gc-prototype-1-te/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,12 +569,14 @@
 		4FCFC15D241D2D540022580E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"gc-prototype-1-te/Preview Content\"";
 				DEVELOPMENT_TEAM = 9NHZYLFW4V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "gc-prototype-1-te/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -554,6 +672,49 @@
 			};
 			name = Release;
 		};
+		4FCFC177241D2D830022580E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9NHZYLFW4V;
+				INFOPLIST_FILE = "Gagern Cloud Aktuell/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.fheuschen.gc-prototype-1-te.Gagern-Cloud-Aktuell";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Gagern Cloud Aktuell/Gagern Cloud Aktuell-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4FCFC178241D2D830022580E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9NHZYLFW4V;
+				INFOPLIST_FILE = "Gagern Cloud Aktuell/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.fheuschen.gc-prototype-1-te.Gagern-Cloud-Aktuell";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Gagern Cloud Aktuell/Gagern Cloud Aktuell-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -589,6 +750,15 @@
 			buildConfigurations = (
 				4FCFC162241D2D540022580E /* Debug */,
 				4FCFC163241D2D540022580E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FCFC176241D2D830022580E /* Build configuration list for PBXNativeTarget "Gagern Cloud Aktuell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FCFC177241D2D830022580E /* Debug */,
+				4FCFC178241D2D830022580E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
