@@ -11,7 +11,7 @@ import NotificationCenter
 
 class GagernTodayViewControllerTableController: UITableViewController {
 
-    var homework = ["S. 36f. 5a-j 7g-l 8", "Experiment AB3", "Resümee (vgl. AB1)", "S. 158 4-6", "Comparative Essay"]
+    var homework = ["S. 36f. 5a-j 7g-l 8", "Resümee (vgl. AB1)"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,16 +27,22 @@ class GagernTodayViewControllerTableController: UITableViewController {
         print("Enabling expansion")
         extensionContext?.widgetLargestAvailableDisplayMode = .expanded
         print("Done.")
+        
+        
 
     }
 
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        print("Called")
         if activeDisplayMode == .expanded {
-            preferredContentSize = CGSize(width: maxSize.width, height: 500)
+            print("Expanded")
+            preferredContentSize = CGSize(width: maxSize.width, height: 699)
         } else {
+            print("Compact")
             preferredContentSize = maxSize
         }
     }
+
 
     // MARK: - Table view data source
 
