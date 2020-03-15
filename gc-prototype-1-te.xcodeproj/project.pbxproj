@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B149A8ECCB1C6CBFC3442D9 /* Pods_gc_prototype_1_te_gc_prototype_1_teUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FAD81AD4B307018AA5496C /* Pods_gc_prototype_1_te_gc_prototype_1_teUITests.framework */; };
+		44734EC0440B45B6AE2B1A34 /* Pods_gc_prototype_1_te.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9391ACFD6D99B30E7BBC1F7 /* Pods_gc_prototype_1_te.framework */; };
+		4F167A52241E880000206C8B /* SMIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F167A51241E880000206C8B /* SMIconLabel.swift */; };
 		4FCFC135241D2D510022580E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCFC134241D2D510022580E /* AppDelegate.swift */; };
 		4FCFC137241D2D510022580E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCFC136241D2D510022580E /* SceneDelegate.swift */; };
 		4FCFC139241D2D510022580E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCFC138241D2D510022580E /* ContentView.swift */; };
@@ -19,6 +22,8 @@
 		4FCFC171241D2D830022580E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FCFC16F241D2D830022580E /* MainInterface.storyboard */; };
 		4FCFC175241D2D830022580E /* Gagern Cloud Aktuell.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4FCFC168241D2D830022580E /* Gagern Cloud Aktuell.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4FCFC17C241D42B30022580E /* GagernTodayViewControllerTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCFC17B241D42B30022580E /* GagernTodayViewControllerTableController.swift */; };
+		9A97680A5B96A5523A9DEC2E /* Pods_Gagern_Cloud_Aktuell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E06CF52A5771FDEA6DBCB05 /* Pods_Gagern_Cloud_Aktuell.framework */; };
+		C58A691B44C72168D265FDD5 /* Pods_gc_prototype_1_teTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACC7AF47B8ECA8574F62A9A /* Pods_gc_prototype_1_teTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2CDC73D5714714040735BBB6 /* Pods-Gagern Cloud Aktuell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gagern Cloud Aktuell.debug.xcconfig"; path = "Target Support Files/Pods-Gagern Cloud Aktuell/Pods-Gagern Cloud Aktuell.debug.xcconfig"; sourceTree = "<group>"; };
+		33D09792358B7A9F6A122CE4 /* Pods-gc-prototype-1-teTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gc-prototype-1-teTests.debug.xcconfig"; path = "Target Support Files/Pods-gc-prototype-1-teTests/Pods-gc-prototype-1-teTests.debug.xcconfig"; sourceTree = "<group>"; };
+		35AD4B5F4B0CA34B7C618CAA /* Pods-gc-prototype-1-te.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gc-prototype-1-te.release.xcconfig"; path = "Target Support Files/Pods-gc-prototype-1-te/Pods-gc-prototype-1-te.release.xcconfig"; sourceTree = "<group>"; };
+		4F167A50241E438A00206C8B /* Gagern Cloud Aktuell.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Gagern Cloud Aktuell.entitlements"; sourceTree = "<group>"; };
+		4F167A51241E880000206C8B /* SMIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMIconLabel.swift; sourceTree = "<group>"; };
 		4FCFC131241D2D510022580E /* gc-prototype-1-te.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gc-prototype-1-te.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FCFC134241D2D510022580E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FCFC136241D2D510022580E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +90,15 @@
 		4FCFC172241D2D830022580E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FCFC17A241D42B30022580E /* Gagern Cloud Aktuell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gagern Cloud Aktuell-Bridging-Header.h"; sourceTree = "<group>"; };
 		4FCFC17B241D42B30022580E /* GagernTodayViewControllerTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GagernTodayViewControllerTableController.swift; sourceTree = "<group>"; };
+		69FAD81AD4B307018AA5496C /* Pods_gc_prototype_1_te_gc_prototype_1_teUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gc_prototype_1_te_gc_prototype_1_teUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E06CF52A5771FDEA6DBCB05 /* Pods_Gagern_Cloud_Aktuell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gagern_Cloud_Aktuell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BC311991BF5D1EFC2E64835 /* Pods-gc-prototype-1-te-gc-prototype-1-teUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gc-prototype-1-te-gc-prototype-1-teUITests.debug.xcconfig"; path = "Target Support Files/Pods-gc-prototype-1-te-gc-prototype-1-teUITests/Pods-gc-prototype-1-te-gc-prototype-1-teUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE3CBC939C32A223D03CF5B1 /* Pods-gc-prototype-1-te-gc-prototype-1-teUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gc-prototype-1-te-gc-prototype-1-teUITests.release.xcconfig"; path = "Target Support Files/Pods-gc-prototype-1-te-gc-prototype-1-teUITests/Pods-gc-prototype-1-te-gc-prototype-1-teUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CF4CEF3319F1398E25C7F165 /* Pods-gc-prototype-1-te.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gc-prototype-1-te.debug.xcconfig"; path = "Target Support Files/Pods-gc-prototype-1-te/Pods-gc-prototype-1-te.debug.xcconfig"; sourceTree = "<group>"; };
+		D1E51314B83869003016DDFA /* Pods-gc-prototype-1-teTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gc-prototype-1-teTests.release.xcconfig"; path = "Target Support Files/Pods-gc-prototype-1-teTests/Pods-gc-prototype-1-teTests.release.xcconfig"; sourceTree = "<group>"; };
+		D5D9337B36EB3E81DBDDE3B4 /* Pods-Gagern Cloud Aktuell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gagern Cloud Aktuell.release.xcconfig"; path = "Target Support Files/Pods-Gagern Cloud Aktuell/Pods-Gagern Cloud Aktuell.release.xcconfig"; sourceTree = "<group>"; };
+		D9391ACFD6D99B30E7BBC1F7 /* Pods_gc_prototype_1_te.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gc_prototype_1_te.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EACC7AF47B8ECA8574F62A9A /* Pods_gc_prototype_1_teTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gc_prototype_1_teTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44734EC0440B45B6AE2B1A34 /* Pods_gc_prototype_1_te.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C58A691B44C72168D265FDD5 /* Pods_gc_prototype_1_teTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B149A8ECCB1C6CBFC3442D9 /* Pods_gc_prototype_1_te_gc_prototype_1_teUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FCFC16B241D2D830022580E /* NotificationCenter.framework in Frameworks */,
+				9A97680A5B96A5523A9DEC2E /* Pods_Gagern_Cloud_Aktuell.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +147,7 @@
 				4FCFC16C241D2D830022580E /* Gagern Cloud Aktuell */,
 				4FCFC169241D2D830022580E /* Frameworks */,
 				4FCFC132241D2D510022580E /* Products */,
+				87987CA0DBAE3BEE2B4BB034 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,6 +206,10 @@
 			isa = PBXGroup;
 			children = (
 				4FCFC16A241D2D830022580E /* NotificationCenter.framework */,
+				6E06CF52A5771FDEA6DBCB05 /* Pods_Gagern_Cloud_Aktuell.framework */,
+				D9391ACFD6D99B30E7BBC1F7 /* Pods_gc_prototype_1_te.framework */,
+				69FAD81AD4B307018AA5496C /* Pods_gc_prototype_1_te_gc_prototype_1_teUITests.framework */,
+				EACC7AF47B8ECA8574F62A9A /* Pods_gc_prototype_1_teTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,12 +217,30 @@
 		4FCFC16C241D2D830022580E /* Gagern Cloud Aktuell */ = {
 			isa = PBXGroup;
 			children = (
+				4F167A50241E438A00206C8B /* Gagern Cloud Aktuell.entitlements */,
 				4FCFC16F241D2D830022580E /* MainInterface.storyboard */,
 				4FCFC172241D2D830022580E /* Info.plist */,
 				4FCFC17B241D42B30022580E /* GagernTodayViewControllerTableController.swift */,
 				4FCFC17A241D42B30022580E /* Gagern Cloud Aktuell-Bridging-Header.h */,
+				4F167A51241E880000206C8B /* SMIconLabel.swift */,
 			);
 			path = "Gagern Cloud Aktuell";
+			sourceTree = "<group>";
+		};
+		87987CA0DBAE3BEE2B4BB034 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2CDC73D5714714040735BBB6 /* Pods-Gagern Cloud Aktuell.debug.xcconfig */,
+				D5D9337B36EB3E81DBDDE3B4 /* Pods-Gagern Cloud Aktuell.release.xcconfig */,
+				CF4CEF3319F1398E25C7F165 /* Pods-gc-prototype-1-te.debug.xcconfig */,
+				35AD4B5F4B0CA34B7C618CAA /* Pods-gc-prototype-1-te.release.xcconfig */,
+				7BC311991BF5D1EFC2E64835 /* Pods-gc-prototype-1-te-gc-prototype-1-teUITests.debug.xcconfig */,
+				BE3CBC939C32A223D03CF5B1 /* Pods-gc-prototype-1-te-gc-prototype-1-teUITests.release.xcconfig */,
+				33D09792358B7A9F6A122CE4 /* Pods-gc-prototype-1-teTests.debug.xcconfig */,
+				D1E51314B83869003016DDFA /* Pods-gc-prototype-1-teTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,10 +250,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FCFC15B241D2D540022580E /* Build configuration list for PBXNativeTarget "gc-prototype-1-te" */;
 			buildPhases = (
+				8E68D75DCCD0FCE465729CB6 /* [CP] Check Pods Manifest.lock */,
 				4FCFC12D241D2D510022580E /* Sources */,
 				4FCFC12E241D2D510022580E /* Frameworks */,
 				4FCFC12F241D2D510022580E /* Resources */,
 				4FCFC179241D2D830022580E /* Embed App Extensions */,
+				87E88AAB9ED06ACA6719B193 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,6 +271,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FCFC15E241D2D540022580E /* Build configuration list for PBXNativeTarget "gc-prototype-1-teTests" */;
 			buildPhases = (
+				E4C03239D4F836510093023C /* [CP] Check Pods Manifest.lock */,
 				4FCFC143241D2D540022580E /* Sources */,
 				4FCFC144241D2D540022580E /* Frameworks */,
 				4FCFC145241D2D540022580E /* Resources */,
@@ -241,6 +290,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FCFC161241D2D540022580E /* Build configuration list for PBXNativeTarget "gc-prototype-1-teUITests" */;
 			buildPhases = (
+				0876ED4CBF9F8A048EE48FB9 /* [CP] Check Pods Manifest.lock */,
 				4FCFC14E241D2D540022580E /* Sources */,
 				4FCFC14F241D2D540022580E /* Frameworks */,
 				4FCFC150241D2D540022580E /* Resources */,
@@ -259,6 +309,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FCFC176241D2D830022580E /* Build configuration list for PBXNativeTarget "Gagern Cloud Aktuell" */;
 			buildPhases = (
+				2E8DAD058C8A706E887C8E9C /* [CP] Check Pods Manifest.lock */,
 				4FCFC164241D2D830022580E /* Sources */,
 				4FCFC165241D2D830022580E /* Frameworks */,
 				4FCFC166241D2D830022580E /* Resources */,
@@ -355,6 +406,114 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0876ED4CBF9F8A048EE48FB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gc-prototype-1-te-gc-prototype-1-teUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E8DAD058C8A706E887C8E9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gagern Cloud Aktuell-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87E88AAB9ED06ACA6719B193 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gc-prototype-1-te/Pods-gc-prototype-1-te-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gc-prototype-1-te/Pods-gc-prototype-1-te-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gc-prototype-1-te/Pods-gc-prototype-1-te-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E68D75DCCD0FCE465729CB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gc-prototype-1-te-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4C03239D4F836510093023C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gc-prototype-1-teTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4FCFC12D241D2D510022580E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -387,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FCFC17C241D42B30022580E /* GagernTodayViewControllerTableController.swift in Sources */,
+				4F167A52241E880000206C8B /* SMIconLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +706,7 @@
 		};
 		4FCFC15C241D2D540022580E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF4CEF3319F1398E25C7F165 /* Pods-gc-prototype-1-te.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -554,7 +715,7 @@
 				DEVELOPMENT_TEAM = 9NHZYLFW4V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "gc-prototype-1-te/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -568,6 +729,7 @@
 		};
 		4FCFC15D241D2D540022580E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35AD4B5F4B0CA34B7C618CAA /* Pods-gc-prototype-1-te.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -576,7 +738,7 @@
 				DEVELOPMENT_TEAM = 9NHZYLFW4V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "gc-prototype-1-te/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -590,6 +752,7 @@
 		};
 		4FCFC15F241D2D540022580E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33D09792358B7A9F6A122CE4 /* Pods-gc-prototype-1-teTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -612,6 +775,7 @@
 		};
 		4FCFC160241D2D540022580E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1E51314B83869003016DDFA /* Pods-gc-prototype-1-teTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -634,6 +798,7 @@
 		};
 		4FCFC162241D2D540022580E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BC311991BF5D1EFC2E64835 /* Pods-gc-prototype-1-te-gc-prototype-1-teUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -654,6 +819,7 @@
 		};
 		4FCFC163241D2D540022580E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE3CBC939C32A223D03CF5B1 /* Pods-gc-prototype-1-te-gc-prototype-1-teUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -674,11 +840,15 @@
 		};
 		4FCFC177241D2D830022580E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CDC73D5714714040735BBB6 /* Pods-Gagern Cloud Aktuell.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Gagern Cloud Aktuell/Gagern Cloud Aktuell.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 9NHZYLFW4V;
 				INFOPLIST_FILE = "Gagern Cloud Aktuell/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -687,6 +857,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.fheuschen.gc-prototype-1-te.Gagern-Cloud-Aktuell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Gagern Cloud Aktuell/Gagern Cloud Aktuell-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -696,11 +867,15 @@
 		};
 		4FCFC178241D2D830022580E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5D9337B36EB3E81DBDDE3B4 /* Pods-Gagern Cloud Aktuell.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Gagern Cloud Aktuell/Gagern Cloud Aktuell.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 9NHZYLFW4V;
 				INFOPLIST_FILE = "Gagern Cloud Aktuell/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -709,6 +884,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.fheuschen.gc-prototype-1-te.Gagern-Cloud-Aktuell";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Gagern Cloud Aktuell/Gagern Cloud Aktuell-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

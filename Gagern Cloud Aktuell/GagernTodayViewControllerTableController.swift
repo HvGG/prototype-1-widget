@@ -8,6 +8,7 @@
 
 import UIKit
 import NotificationCenter
+import PaddingLabel
 
 class GagernTodayViewControllerTableController: UITableViewController {
 
@@ -15,15 +16,6 @@ class GagernTodayViewControllerTableController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        //self.preferredContentSize = CGSize(width:self.view.frame.size.width, height:512)
-        
         print("Enabling expansion")
         extensionContext?.widgetLargestAvailableDisplayMode = .expanded
         print("Done.")
@@ -59,8 +51,70 @@ class GagernTodayViewControllerTableController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeworkCell", for: indexPath)
 
-        cell.textLabel?.text = homework[indexPath.row]
+        //cell.textLabel?.text = homework[indexPath.row]
 
+        
+        
+        print("SMIconLabel")
+        /*let iconLabel = SMIconLabel(frame: CGRect(x: 0, y: 0, width: cell.frame.size.width, height: cell.frame.size.height))
+        iconLabel.text = homework[indexPath.row]
+        iconLabel.icon = UIImage(systemName: "calendar")
+        iconLabel.iconPadding = 5
+        iconLabel.numberOfLines = 1
+        iconLabel.iconPosition = (.left, .top)
+        cell.addSubview(iconLabel)*/
+        cell.textLabel?.removeFromSuperview()
+        
+        
+        let title = PaddingLabel()
+        title.text = homework[indexPath.row]
+        title.leftInset = 5.0
+        title.bottomInset = 5.0
+        title.topInset = 0
+        //title.heightAnchor.constraint(equalToConstant: cell.frame.size.height).isActive = true
+        //title.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        
+        let conf = UIImage.SymbolConfiguration(scale: .default)
+        let img = UIImage(systemName: "calendar", withConfiguration: conf)
+        
+        let cal = UIImageView(image: img?.withTintColor(.white, renderingMode: .alwaysOriginal))
+        
+        
+        
+        //cal.heightAnchor.constraint(equalToConstant: cell.frame.size.height).isActive = true
+        //cal.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        
+        
+        let date = PaddingLabel()
+        date.text = "23.07.2021"
+        date.rightInset = 5.0
+        date.topInset = 0
+        
+        //date.heightAnchor.constraint(equalToConstant: cell.frame.size.height).isActive = true
+        //date.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        
+        
+        let sw = UIStackView()
+        sw.axis = .horizontal
+        sw.alignment = .center
+        sw.distribution = .equalSpacing
+        
+        
+        sw.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+        cell.addSubview(sw)
+        
+        sw.addArrangedSubview(title)
+        sw.addArrangedSubview(cal)
+        sw.addArrangedSubview(date)
+        
+        sw.translatesAutoresizingMaskIntoConstraints = false
+        cell.addConstraint(NSLayoutConstraint(item: sw, attribute: .top, relatedBy: .equal, toItem: cell, attribute: .top, multiplier: 1.0, constant: 25.0))
+        cell.addConstraint(NSLayoutConstraint(item: sw, attribute: .leading, relatedBy: .equal, toItem: cell, attribute: .leading, multiplier: 1.0, constant: 0.0))
+        cell.addConstraint(NSLayoutConstraint(item: sw, attribute: .trailing, relatedBy: .equal, toItem: cell, attribute: .trailing, multiplier: 1.0, constant: 0.0))
+        
+        //sw.centerXAnchor.constraint(equalTo: cell.centerXAnchor).isActive = true
+        //sw.centerYAnchor.constraint(equalTo: cell.centerYAnchor).isActive = true
+        
         return cell
     
     }
