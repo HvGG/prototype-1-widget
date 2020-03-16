@@ -14,10 +14,10 @@ import LetterAvatarKit
 class GagernTodayViewControllerTableController: UITableViewController, NCWidgetProviding {
 
     var homework = ["S. 36f. 5a-j 7g-l 8", "Experiment AB3", "Resümee (vgl. AB1)", "S. 158 4-6", "Comparative Essay"]
-    var subj = ["Mathe", "Physik", "Deutsch", "Französisch", "PoWi"]
+    var subj = ["M", "PH", "D", "F", "PW"]
     
-    var stati = ["Erledigt", "Ausstehend"]
-    var statiIcons = ["checkmark.seal", "clock"]
+    var stati = ["Erledigt", "16.04.2020"]
+    var statiIcons = ["checkmark.circle.fill", "clock"]
     
     var subjects = [
     "Mathe": "M",
@@ -49,21 +49,13 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Enabling expansion")
         extensionContext?.widgetLargestAvailableDisplayMode = .expanded
-        print("Done.")
-        
-        
-
     }
     
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
-        print("Called")
         if activeDisplayMode == .expanded {
-            print("Expanded")
             preferredContentSize = CGSize(width: maxSize.width, height: CGFloat(homework.count * 110))
         } else {
-            print("Compact")
             preferredContentSize = maxSize
         }
     }
@@ -87,13 +79,12 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
     
     // MARK: - Table view cell creation
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "homeworkCell", for: indexPath) Not really required because we only have up to 10 entries.
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "homeworkCell", for: indexPath) Not really necessary because we only have up to 10 entries.
 
         
         let cell = UITableViewCell();
         //cell.textLabel?.text = homework[indexPath.row]
         
-        print(cell.frame.size.height)
         
 
         //cell.textLabel?.removeFromSuperview()
@@ -137,7 +128,6 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
         
         let s = randomIntFrom(start: 0, to: stati.count - 1)
         let dImg = UIImage(systemName: statiIcons[s], withConfiguration: conf)
-        print(statiIcons[s])
         // MARK: Status
         
         let status = UIImageView(image: dImg?.withTintColor(.white, renderingMode: .alwaysOriginal))
@@ -145,7 +135,7 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
         
         if s == 0 {
             let suc = UIImage(systemName: statiIcons[s], withConfiguration: UIImage.SymbolConfiguration(scale: .large))
-            ava = UIImageView(image: suc?.withTintColor(.green, renderingMode: .alwaysOriginal).imageWithInset(insets: UIEdgeInsets.init(top: 0, left: 0, bottom: 5.0, right: 15.0)))
+            ava = UIImageView(image: suc?.withTintColor(.green, renderingMode: .alwaysOriginal).imageWithInset(insets: UIEdgeInsets.init(top: 0, left: 0, bottom: 5.0, right: 35.0 - (suc?.size.width ?? 0) / 2)))
         }
         
         //ava.layoutMargins = UIEdgeInsets.init(top: 0, left: 0, bottom: 10.0, right: 10.0)
@@ -182,7 +172,6 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
         dateS.addArrangedSubview(date)
         statusS.addArrangedSubview(status)
         statusS.addArrangedSubview(stat)
-        print(ava)
         sw.addArrangedSubview(ava)
         
         sw.translatesAutoresizingMaskIntoConstraints = false
