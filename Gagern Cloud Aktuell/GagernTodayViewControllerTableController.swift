@@ -10,9 +10,27 @@ import UIKit
 import NotificationCenter
 import PaddingLabel
 
-class GagernTodayViewControllerTableController: UITableViewController {
+class GagernTodayViewControllerTableController: UITableViewController, NCWidgetProviding {
 
     var homework = ["S. 36f. 5a-j 7g-l 8", "Resümee (vgl. AB1)"]
+    
+    var subjects = [
+    "Mathe": "M",
+    "Physik": "PH",
+    "Deutsch": "D",
+    "Latein": "L",
+    "Biologie": "B",
+    "Informatik": "INF",
+    "Chemie": "CH",
+    "Musik": "MU",
+    "Griechisch": "GR",
+    "Geschichte": "G",
+    "PoWi": "PW",
+    "Italienisch": "I",
+    "Französisch": "F",
+    "Philosophie": "P",
+    "AG": "AG",
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +41,7 @@ class GagernTodayViewControllerTableController: UITableViewController {
         
 
     }
-
+    
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
         print("Called")
         if activeDisplayMode == .expanded {
@@ -48,11 +66,16 @@ class GagernTodayViewControllerTableController: UITableViewController {
         return homework.count
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110.0;//Choose your custom row height
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeworkCell", for: indexPath)
 
         //cell.textLabel?.text = homework[indexPath.row]
-
+        
+        print(cell.frame.size.height)
         
         
         print("SMIconLabel")
@@ -78,17 +101,18 @@ class GagernTodayViewControllerTableController: UITableViewController {
         let img = UIImage(systemName: "calendar", withConfiguration: conf)
         
         let cal = UIImageView(image: img?.withTintColor(.white, renderingMode: .alwaysOriginal))
-        
-        
+        cal.layoutMargins = UIEdgeInsets.init(top: 0, left: 0, bottom: 25.0, right: 0)
+    
         
         //cal.heightAnchor.constraint(equalToConstant: cell.frame.size.height).isActive = true
         //cal.widthAnchor.constraint(equalToConstant: 80).isActive = true
-        
         
         let date = PaddingLabel()
         date.text = "23.07.2021"
         date.rightInset = 5.0
         date.topInset = 0
+        date.bottomInset = 5.0
+        
         
         //date.heightAnchor.constraint(equalToConstant: cell.frame.size.height).isActive = true
         //date.widthAnchor.constraint(equalToConstant: 80).isActive = true
@@ -97,7 +121,7 @@ class GagernTodayViewControllerTableController: UITableViewController {
         let sw = UIStackView()
         sw.axis = .horizontal
         sw.alignment = .center
-        sw.distribution = .equalSpacing
+        sw.distribution = .fill
         
         
         sw.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
