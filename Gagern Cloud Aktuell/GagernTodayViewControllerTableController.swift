@@ -84,6 +84,8 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
         return 110.0;//Choose your custom row height
     }
     
+    
+    // MARK: - Table view cell creation
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let cell = tableView.dequeueReusableCell(withIdentifier: "homeworkCell", for: indexPath) Not really required because we only have up to 10 entries.
 
@@ -102,23 +104,25 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
             .setCircle(true)
             .setUsername(subj[indexPath.row])
             .setBackgroundColors([.gray])
+            .setSize(CGSize(width: 50, height: 50))
             .build()
+        //let bA = (cell.frame.size.height - ((avatar?.size.height)!)) / 2
+        var ava = UIImageView(image: avatar?.imageWithInset(insets: UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 15.0)))
         
-        var ava = UIImageView(image: avatar)
         
         let title = PaddingLabel()
         title.text = homework[indexPath.row]
         title.leftInset = 5.0
         title.bottomInset = 5.0
         title.topInset = 0
-        title.font = UIFont.boldSystemFont(ofSize: 16)
+        title.font = UIFont.boldSystemFont(ofSize: 20)
         
         let conf = UIImage.SymbolConfiguration(scale: .default)
         let img = UIImage(systemName: "calendar", withConfiguration: conf)
         
         // MARK: Calendar / Date
         
-        let cal = UIImageView(image: img?.withTintColor(.white, renderingMode: .alwaysOriginal))
+        let cal = UIImageView(image: img?.withTintColor(.white, renderingMode: .alwaysOriginal).imageWithInsets(insetDimen: 5.0))
         cal.layoutMargins = UIEdgeInsets.init(top: 0, left: 0, bottom: 25.0, right: 0)
         
         let date = PaddingLabel()
@@ -141,8 +145,10 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
         
         if s == 0 {
             let suc = UIImage(systemName: statiIcons[s], withConfiguration: UIImage.SymbolConfiguration(scale: .large))
-            ava = UIImageView(image: suc?.withTintColor(.green, renderingMode: .alwaysOriginal))
+            ava = UIImageView(image: suc?.withTintColor(.green, renderingMode: .alwaysOriginal).imageWithInset(insets: UIEdgeInsets.init(top: 0, left: 0, bottom: 5.0, right: 5.0)))
         }
+        
+        ava.layoutMargins = UIEdgeInsets.init(top: 0, left: 0, bottom: 10.0, right: 10.0)
         
         let stat = PaddingLabel()
         date.text = stati[s]

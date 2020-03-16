@@ -10,6 +10,7 @@
 		3B149A8ECCB1C6CBFC3442D9 /* Pods_gc_prototype_1_te_gc_prototype_1_teUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FAD81AD4B307018AA5496C /* Pods_gc_prototype_1_te_gc_prototype_1_teUITests.framework */; };
 		44734EC0440B45B6AE2B1A34 /* Pods_gc_prototype_1_te.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9391ACFD6D99B30E7BBC1F7 /* Pods_gc_prototype_1_te.framework */; };
 		4F167A52241E880000206C8B /* SMIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F167A51241E880000206C8B /* SMIconLabel.swift */; };
+		4F63B316241FCEAC001F459D /* MarginImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F63B315241FCEAC001F459D /* MarginImage.swift */; };
 		4FCFC135241D2D510022580E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCFC134241D2D510022580E /* AppDelegate.swift */; };
 		4FCFC137241D2D510022580E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCFC136241D2D510022580E /* SceneDelegate.swift */; };
 		4FCFC139241D2D510022580E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCFC138241D2D510022580E /* ContentView.swift */; };
@@ -71,6 +72,7 @@
 		4F167A50241E438A00206C8B /* Gagern Cloud Aktuell.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Gagern Cloud Aktuell.entitlements"; sourceTree = "<group>"; };
 		4F167A51241E880000206C8B /* SMIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMIconLabel.swift; sourceTree = "<group>"; };
 		4F63B314241F989F001F459D /* gc-prototype-1-te.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "gc-prototype-1-te.entitlements"; sourceTree = "<group>"; };
+		4F63B315241FCEAC001F459D /* MarginImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginImage.swift; sourceTree = "<group>"; };
 		4FCFC131241D2D510022580E /* gc-prototype-1-te.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gc-prototype-1-te.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FCFC134241D2D510022580E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FCFC136241D2D510022580E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				4FCFC17B241D42B30022580E /* GagernTodayViewControllerTableController.swift */,
 				4FCFC17A241D42B30022580E /* Gagern Cloud Aktuell-Bridging-Header.h */,
 				4F167A51241E880000206C8B /* SMIconLabel.swift */,
+				4F63B315241FCEAC001F459D /* MarginImage.swift */,
 			);
 			path = "Gagern Cloud Aktuell";
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FCFC17C241D42B30022580E /* GagernTodayViewControllerTableController.swift in Sources */,
+				4F63B316241FCEAC001F459D /* MarginImage.swift in Sources */,
 				4F167A52241E880000206C8B /* SMIconLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
