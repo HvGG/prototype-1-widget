@@ -17,7 +17,7 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
     var subj = ["Mathe", "Physik", "Deutsch", "Französisch", "PoWi"]
     
     var stati = ["Erledigt", "Ausstehend"]
-    var statiIcons = ["checklist.seal", "clock"]
+    var statiIcons = ["checkmark.seal", "clock"]
     
     var subjects = [
     "Mathe": "M",
@@ -137,7 +137,7 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
         
         let s = randomIntFrom(start: 0, to: stati.count - 1)
         let dImg = UIImage(systemName: statiIcons[s], withConfiguration: conf)
-        
+        print(statiIcons[s])
         // MARK: Status
         
         let status = UIImageView(image: dImg?.withTintColor(.white, renderingMode: .alwaysOriginal))
@@ -145,10 +145,10 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
         
         if s == 0 {
             let suc = UIImage(systemName: statiIcons[s], withConfiguration: UIImage.SymbolConfiguration(scale: .large))
-            ava = UIImageView(image: suc?.withTintColor(.green, renderingMode: .alwaysOriginal).imageWithInset(insets: UIEdgeInsets.init(top: 0, left: 0, bottom: 5.0, right: 5.0)))
+            ava = UIImageView(image: suc?.withTintColor(.green, renderingMode: .alwaysOriginal).imageWithInset(insets: UIEdgeInsets.init(top: 0, left: 0, bottom: 5.0, right: 15.0)))
         }
         
-        ava.layoutMargins = UIEdgeInsets.init(top: 0, left: 0, bottom: 10.0, right: 10.0)
+        //ava.layoutMargins = UIEdgeInsets.init(top: 0, left: 0, bottom: 10.0, right: 10.0)
         
         let stat = PaddingLabel()
         date.text = stati[s]
@@ -182,6 +182,7 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
         dateS.addArrangedSubview(date)
         statusS.addArrangedSubview(status)
         statusS.addArrangedSubview(stat)
+        print(ava)
         sw.addArrangedSubview(ava)
         
         sw.translatesAutoresizingMaskIntoConstraints = false
