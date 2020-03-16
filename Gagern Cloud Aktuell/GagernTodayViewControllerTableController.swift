@@ -9,10 +9,15 @@
 import UIKit
 import NotificationCenter
 import PaddingLabel
+import LetterAvatarKit
 
 class GagernTodayViewControllerTableController: UITableViewController, NCWidgetProviding {
 
-    var homework = ["S. 36f. 5a-j 7g-l 8", "Resümee (vgl. AB1)"]
+    var homework = ["S. 36f. 5a-j 7g-l 8", "Experiment AB3", "Resümee (vgl. AB1)", "S. 158 4-6", "Comparative Essay"]
+    var subj = ["Mathe", "Physik", "Deutsch", "Französisch", "PoWi"]
+    
+    var stati = ["Erledigt", "Ausstehend"]
+    var statiIcons = ["checklist.seal", "clock"]
     
     var subjects = [
     "Mathe": "M",
@@ -32,6 +37,16 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
     "AG": "AG",
     ]
     
+    func randomIntFrom(start: Int, to end: Int) -> Int {
+        var a = start
+        var b = end
+        // swap to prevent negative integer crashes
+        if a > b {
+            swap(&a, &b)
+        }
+        return Int(arc4random_uniform(UInt32(b - a + 1))) + a
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Enabling expansion")
@@ -46,14 +61,13 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
         print("Called")
         if activeDisplayMode == .expanded {
             print("Expanded")
-            preferredContentSize = CGSize(width: maxSize.width, height: 699)
+            preferredContentSize = CGSize(width: maxSize.width, height: CGFloat(homework.count * 110))
         } else {
             print("Compact")
             preferredContentSize = maxSize
         }
     }
-
-
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -71,41 +85,41 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "homeworkCell", for: indexPath)
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "homeworkCell", for: indexPath) Not really required because we only have up to 10 entries.
 
+        
+        let cell = UITableViewCell();
         //cell.textLabel?.text = homework[indexPath.row]
         
         print(cell.frame.size.height)
         
+
+        //cell.textLabel?.removeFromSuperview()
+            
+        //cell.subviews.forEach({ $0.removeFromSuperview() })
         
-        print("SMIconLabel")
-        /*let iconLabel = SMIconLabel(frame: CGRect(x: 0, y: 0, width: cell.frame.size.width, height: cell.frame.size.height))
-        iconLabel.text = homework[indexPath.row]
-        iconLabel.icon = UIImage(systemName: "calendar")
-        iconLabel.iconPadding = 5
-        iconLabel.numberOfLines = 1
-        iconLabel.iconPosition = (.left, .top)
-        cell.addSubview(iconLabel)*/
-        cell.textLabel?.removeFromSuperview()
+        let avatar = LetterAvatarMaker()
+            .setCircle(true)
+            .setUsername(subj[indexPath.row])
+            .setBackgroundColors([.gray])
+            .build()
         
+        var ava = UIImageView(image: avatar)
         
         let title = PaddingLabel()
         title.text = homework[indexPath.row]
         title.leftInset = 5.0
         title.bottomInset = 5.0
         title.topInset = 0
-        //title.heightAnchor.constraint(equalToConstant: cell.frame.size.height).isActive = true
-        //title.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        title.font = UIFont.boldSystemFont(ofSize: 16)
         
         let conf = UIImage.SymbolConfiguration(scale: .default)
         let img = UIImage(systemName: "calendar", withConfiguration: conf)
         
+        // MARK: Calendar / Date
+        
         let cal = UIImageView(image: img?.withTintColor(.white, renderingMode: .alwaysOriginal))
         cal.layoutMargins = UIEdgeInsets.init(top: 0, left: 0, bottom: 25.0, right: 0)
-    
-        
-        //cal.heightAnchor.constraint(equalToConstant: cell.frame.size.height).isActive = true
-        //cal.widthAnchor.constraint(equalToConstant: 80).isActive = true
         
         let date = PaddingLabel()
         date.text = "23.07.2021"
@@ -113,10 +127,37 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
         date.topInset = 0
         date.bottomInset = 5.0
         
+        let dateS = UIStackView()
+        dateS.axis = .horizontal
         
-        //date.heightAnchor.constraint(equalToConstant: cell.frame.size.height).isActive = true
-        //date.widthAnchor.constraint(equalToConstant: 80).isActive = true
         
+        let s = randomIntFrom(start: 0, to: stati.count - 1)
+        let dImg = UIImage(systemName: statiIcons[s], withConfiguration: conf)
+        
+        // MARK: Status
+        
+        let status = UIImageView(image: dImg?.withTintColor(.white, renderingMode: .alwaysOriginal))
+        cal.layoutMargins = UIEdgeInsets.init(top: 0, left: 0, bottom: 25.0, right: 0)
+        
+        if s == 0 {
+            let suc = UIImage(systemName: statiIcons[s], withConfiguration: UIImage.SymbolConfiguration(scale: .large))
+            ava = UIImageView(image: suc?.withTintColor(.green, renderingMode: .alwaysOriginal))
+        }
+        
+        let stat = PaddingLabel()
+        date.text = stati[s]
+        date.rightInset = 5.0
+        date.topInset = 0
+        date.bottomInset = 5.0
+        
+        let statusS = UIStackView()
+        dateS.axis = .horizontal
+        
+        
+        let data = UIStackView()
+        data.axis = .vertical
+        data.alignment = .leading
+        data.distribution = .fill
         
         let sw = UIStackView()
         sw.axis = .horizontal
@@ -127,17 +168,20 @@ class GagernTodayViewControllerTableController: UITableViewController, NCWidgetP
         sw.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
         cell.addSubview(sw)
         
-        sw.addArrangedSubview(title)
-        sw.addArrangedSubview(cal)
-        sw.addArrangedSubview(date)
+        sw.addArrangedSubview(data)
+        data.addArrangedSubview(title)
+        data.addArrangedSubview(dateS)
+        //data.addArrangedSubview(statusS)
+        dateS.addArrangedSubview(cal)
+        dateS.addArrangedSubview(date)
+        statusS.addArrangedSubview(status)
+        statusS.addArrangedSubview(stat)
+        sw.addArrangedSubview(ava)
         
         sw.translatesAutoresizingMaskIntoConstraints = false
         cell.addConstraint(NSLayoutConstraint(item: sw, attribute: .top, relatedBy: .equal, toItem: cell, attribute: .top, multiplier: 1.0, constant: 25.0))
         cell.addConstraint(NSLayoutConstraint(item: sw, attribute: .leading, relatedBy: .equal, toItem: cell, attribute: .leading, multiplier: 1.0, constant: 0.0))
         cell.addConstraint(NSLayoutConstraint(item: sw, attribute: .trailing, relatedBy: .equal, toItem: cell, attribute: .trailing, multiplier: 1.0, constant: 0.0))
-        
-        //sw.centerXAnchor.constraint(equalTo: cell.centerXAnchor).isActive = true
-        //sw.centerYAnchor.constraint(equalTo: cell.centerYAnchor).isActive = true
         
         return cell
     

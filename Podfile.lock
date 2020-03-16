@@ -1,16 +1,20 @@
 PODS:
+  - LetterAvatarKit (1.2.1)
   - PaddingLabel (1.1)
 
 DEPENDENCIES:
+  - LetterAvatarKit (= 1.2.1)
   - PaddingLabel (= 1.1)
 
 SPEC REPOS:
   trunk:
+    - LetterAvatarKit
     - PaddingLabel
 
 SPEC CHECKSUMS:
+  LetterAvatarKit: 74da068d6bf2253b05f827bcef599da8841f5a13
   PaddingLabel: d11fee9d2be54122a037bb4a429fb5d3f2c73d58
 
-PODFILE CHECKSUM: f0d2a46aafacc67e8d192af222e43daee48ad5e0
+PODFILE CHECKSUM: abe26d4e543cb957affa2f4b6165b919ed0aafc4
 
 COCOAPODS: 1.8.4

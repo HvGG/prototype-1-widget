@@ -10,6 +10,7 @@ target 'Gagern Cloud Aktuell' do
   # Pods for Gagern Cloud Aktuell
 
   pod 'PaddingLabel', '1.1'
+  pod "LetterAvatarKit", "1.2.1"
 
 end
 
